@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jp.mapper.CompanyMapperCustom">
+  	
+    <select id="getCompanyList" resultType="com.jp.po.Company">
+        select * from company order by endtime desc
+    </select>
+    
+    <select id="getCompanyById" parameterType="java.lang.Integer"  resultType="com.jp.po.Company">
+        select * from company where id = #{id}
+    </select>
+    
+</mapper>
